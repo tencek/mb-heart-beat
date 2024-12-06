@@ -15,7 +15,14 @@ music.setVolume(200)
 led.setBrightness(255)
 basic.forever(function () {
     if (running) {
-        basic.showIcon(IconNames.Heart)
+        //basic.showIcon(IconNames.Heart)
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # # # # #
+            # # # # #
+            . # . # .
+            `)
         music.play(music.tonePlayable(698, music.beat(BeatFraction.Quarter)), music.PlaybackMode.UntilDone)
         basic.pause(150)
         basic.clearScreen()
